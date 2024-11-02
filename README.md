@@ -92,3 +92,31 @@ of Pokémon across different generations.
 3. Main Loop for Violin subplots
 4. Correct and Enhance the visualisation
 5. Visualizations with Built-in Statistical Features 
+
+**Part 6: Visualizations with Built-in Statistical Features**
+Create a Chart like below
+- Violin Chart: Total Stat Value Over Primary Types 
+- Pie Chart: okémon Distributions Over Primary Type
+- Scatter Chart: Base Exp Requirements vs Pokémon Strength
+- Scatter Chart: Pokémon Height vs Pokémon Weight
+- Heatmap Chart: Pokémon Primary Type - Base Exp Requirements Distribution
+
+You will be based on this subplot structure:
+# Define a 5x5 subplot layout
+specs = [
+    [{'rowspan': 3, 'colspan': 3},  None, None, None,               {'rowspan': 3, 'colspan': 3}, None,                           None],
+    [None,                          None, None, None,               None,                         None,                           None],
+    [None,                          None, None, None,               None,                         None,                           None],
+    [None,                          None, None, {'type':'domain'},  None,                         None,                           None],
+    [{'rowspan': 3, 'colspan': 3},  None, None, None,               {'rowspan': 3, 'colspan': 3}, None,                           None],
+    [None,                          None, None, None,               None,                         None,                           None],
+    [None,                          None, None, None,               None,                         None,                           None],
+]
+
+# Initialize subplots
+fig = make_subplots(rows=7, cols=7, specs=specs, 
+                    subplot_titles=['Pokémon Total Stat Value over Primary Types', 
+                                    'Base Exp Requirements vs Pokémon Strength',
+                                    'Pokémon Distributions <br> over Primary Type<br><br> ',
+                                    'Pokémon Height vs Pokémon Weight',
+                                    'Pokémon Primary Type - Base Exp Requirements Distribution',])
